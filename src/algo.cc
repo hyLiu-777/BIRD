@@ -32,7 +32,7 @@ void monteCarlo(int src, double alpha, int64 n_walk, std::vector<double>& sppr, 
                 break;
             }
             else{
-            	int k = rand()%graph.m_udeg[cur]; // why in unweighted mode??? to do: construct them in weighted mode with alias method.
+            	int k = rand()%graph.m_udeg[cur];
             	cur = graph.m_uedges[cur][k].first;
             	k = rand()%graph.m_vdeg[cur];
             	cur = graph.m_vedges[cur][k].first;
@@ -630,7 +630,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 			}
 			
 			if(graph.m_udeg[tempNode]>0){
-				double ran = (double)rand()/(double)RAND_MAX; // to replace with smft random generator.
+				double ran = (double)rand()/(double)RAND_MAX;
 				tempR = (1-alpha)*tempR;
 				for(const auto& p: graph.m_uedges[tempNode]){ 
 					const uint v_j = p.first;
@@ -669,7 +669,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 			vecVResidueBack[tempNode] = 0; //push
 			
 			if(graph.m_vdeg[tempNode]>0){ // is "IF" costs unavoidable time? 
-				double ran = (double)rand()/(double)RAND_MAX; // to replace with smft random generator.
+				double ran = (double)rand()/(double)RAND_MAX;
 				for(const auto& p: graph.m_vedges[tempNode]){ 
 					const uint u_j = p.first;
 					const double w = p.second;
@@ -696,7 +696,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 
 		
 		// *********************************************//
-		// forward: reuse from U to V. the ordering of neighbors is invalid now!.
+		// forward: reuse from U to V. 
 		
 		uint candidateUCntFor=candidateUCountFor[tempLevelID];
 		// cout << "	forward U->V: " << candidateUCntFor << endl;
@@ -722,7 +722,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 			}
 
 			if(graph.m_udeg[tempNode]>0){
-				double ran = (double)rand()/(double)RAND_MAX; // to replace with smft random generator.
+				double ran = (double)rand()/(double)RAND_MAX; //
 				tempR = (1-alpha)*tempR/(double)graph.m_uwsum[tempNode];
 				// cout << "tempR: " << tempR << endl;
 				for(const auto& p: graph.m_uedges[tempNode]){ 
@@ -760,7 +760,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 		}
 		
 
-		// forward: reuse from V to U. the ordering of neighbors is invalid now!.
+		// forward: reuse from V to U.
 		uint candidateVCntFor=candidateVCountFor;
 		candidateVCountFor = 0;
 		// cout << "forward V->U: " << candidateVCntFor << endl;
@@ -773,7 +773,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 			vecVResidueFor[tempNode] = 0; //push
 			
 			if(graph.m_vdeg[tempNode]>0){ // is "IF" costs unavoidable time? 
-				double ran = (double)rand()/(double)RAND_MAX; // to replace with smft random generator.
+				double ran = (double)rand()/(double)RAND_MAX;
 				tempR = tempR/(double)graph.m_vwsum[tempNode];
 
 				for(const auto& p: graph.m_vedges[tempNode]){ 
