@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++11 -O3 -w -Wl,-rpath -Wl,--enable-new-dtags -rdynamic CMakeFiles/bppr.dir/src/bppr.cc.o -o build/bppr   -L/home/haoyu/ppr/BDPush/lib  -Wl,-rpath,/home/haoyu/ppr/BDPush/lib build/libgraph.a build/libalgo.a build/libutils.a -lpthread -ldl -lrt -lboost_program_options 

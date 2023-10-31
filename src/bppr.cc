@@ -322,8 +322,8 @@ int main(int argc, char **argv){
             fout.close();
         }
     }
-    else if(config.strAlgo==RBHPP){
-        cout << "start bppr with rbhpp!" << endl;
+    else if(config.strAlgo==BDPush){
+        cout << "start bppr with bdpush!" << endl;
         Timer tm(1, "bppr");
         for(const auto& u: seeds){
             std::vector<double> ppr(graph.getNu(), 0);

@@ -1,0 +1,2 @@
+/usr/bin/ar qc build/libalgo.a CMakeFiles/algo.dir/src/algo.cc.o
+/usr/bin/ranlib build/libalgo.a
