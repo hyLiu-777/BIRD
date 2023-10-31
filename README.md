@@ -1,4 +1,14 @@
 # BDPush
+Code for submission "Efficient Approximation of Bidirectional Hidden Personalized
+PageRank: Breaking the $\Tilde{\mathcal{O}}$ Time Barrier"
 
-First sh build.sh.
-Then run on a sample dataset ./bppr -f ../data/ -g avito -a BDPush -e 0.1 --querynum 100
+## Generating queries.
+```python
+$ cd data/
+$ python genseed.py avito 27736   # python data_name |U|
+```
+
+## Running 
+'''shell
+$ sh build.sh
+$ ./bppr -f ../data/ -g avito -a BDPush -e 0.5 --querynum 100 # -f data path -g graph name -a algorithm 
