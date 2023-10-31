@@ -6,7 +6,7 @@ PageRank: Breaking the $\tilde{\mathcal{O}}(m)$ Time Barrier"
 ## Generating queries.
 ```python
 $ cd data/
-$ python genseed.py avito 27736   # python data_name |U|
+$ python genseed.py avito 27736   # python genseed.py data_name |U|
 ```
 
 ## Running 
