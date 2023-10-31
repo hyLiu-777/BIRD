@@ -1,6 +1,6 @@
 # BDPush
 Code for submission "Efficient Approximation of Bidirectional Hidden Personalized
-PageRank: Breaking the $\tilde{\mathcal{O}}$ Time Barrier"
+PageRank: Breaking the $\tilde{\mathcal{O}}(m)$ Time Barrier"
 
 ## Generating queries.
 ```python
