@@ -572,7 +572,7 @@ void RoughBiPartialPush(int src, double alpha, double eps, double delta, double 
 	uint L = (uint)ceil(log(eps/(double)nu)/log(1-alpha))+1;
 	cout<<"Ineration amount L: "<<L<<endl;
 	// double delta = 1.0 / nu; // delta is set to 1/n.
-	double theta = eps*eps*delta/L/16.0/gamma;
+	double theta = eps*eps*delta/L/48.0/gamma;
 	// cout<<"theta: "<<theta<<endl;
 
     vecUResidueBack[0][src] = 1;
