@@ -1,5 +1,5 @@
 # BIRD
-This repo contains codes for paper *"BIRD: Efficient Approximation of Bidirectional Hidden Personalized PageRank"*, PVLDB 2024.
+This repo contains codes for paper **"BIRD: Efficient Approximation of Bidirectional Hidden Personalized PageRank"**, PVLDB 2024.
 
 ## Generating queries.
 ```python
