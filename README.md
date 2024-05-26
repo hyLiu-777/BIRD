@@ -1,7 +1,5 @@
-# BDPush
-Code for submission 
-"Efficient Approximation of Bidirectional Hidden Personalized
-PageRank: Breaking the $\tilde{\mathcal{O}}(m)$ Time Barrier" on VLDB 2024.
+# BIRD
+This repo contains codes for paper "BIRD: Efficient Approximation of Bidirectional Hidden Personalized PageRank".
 
 ## Generating queries.
 ```python
